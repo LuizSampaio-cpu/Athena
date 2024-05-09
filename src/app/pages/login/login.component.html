@@ -1,1 +1,13 @@
-<app-login-layout></app-login-layout>
+<app-login-layout
+btnText="Login">
+<form [formGroup]="loginForm">
+  <app-input-model
+  formName="user"
+  type="text"
+  placeholder="Usuário"></app-input-model>
+  <app-input-model
+  formName="password"
+  type="password"
+  placeholder="Senha"></app-input-model>
+</form>
+</app-login-layout>
