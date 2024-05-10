@@ -1,4 +1,5 @@
 @import "../../../variables.scss";
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap";
 
 main {
   display: flex;
@@ -7,17 +8,39 @@ main {
   height: 100%;
   background-color: $gray-background;
   padding-top: 35px;
+  font-family: "Inter", sans-serif;
+
   section {
 
     .form-section {
       font-size: 20;
       font-weight: 400;
       color: $text-color;
+      width: 100%;
+
 
       h2 {
       font-size: 20;
       font-weight: 400;
       color: $text-color;
+      text-align: center;
+      }
+
+      button {
+        align-self: center;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        width: 100%;
+        font-size: 40;
+        font-weight: 400;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin-left: 6px;
+        font-family: "Inter", sans-serif;
+        margin-bottom: 20px;
+
       }
     }
 
@@ -35,8 +58,14 @@ main {
   }
 
   span {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 6px;
     font-size: 14;
     font-weight: 400;
     color: $text-color;
   }
+
+
 }
