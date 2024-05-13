@@ -3,11 +3,13 @@ btnText="Login"
 (submit)="submit()">
 <form [formGroup]="loginForm">
   <app-input-model
-  formName="user"
+  formControlName="user"
+  inputName="user"
   type="text"
   placeholder="Usuário"></app-input-model>
   <app-input-model
-  formName="password"
+  formControlName="password"
+  inputName="password"
   type="password"
   placeholder="Senha"></app-input-model>
 </form>

@@ -21,12 +21,11 @@ type InputTypes = "text" | "email" | "password"
 })
 export class InputModelComponent implements ControlValueAccessor {
 
-
-
   @Input() type: InputTypes = "text";
   @Input() formName: string = "";
   @Input() placeholder: string = "";
-  @Input() label: string = "";
+  @Input() inputName: string = "";
+
 
   value: string = '';
   onChange: any = () => {};
