@@ -1,6 +1,7 @@
 <app-login-layout
 btnText="Login"
-(submit)="submit()">
+(submit)="submit()"
+[disableBtn]="!loginForm.valid">
 <form [formGroup]="loginForm">
   <app-input-model
   formControlName="user"

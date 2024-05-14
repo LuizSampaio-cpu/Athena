@@ -41,6 +41,10 @@ main {
         font-family: "Inter", sans-serif;
         margin-bottom: 20px;
         cursor: pointer;
+        &:disabled{
+          opacity: 0.7;
+          cursor:not-allowed;
+        }
 
       }
     }

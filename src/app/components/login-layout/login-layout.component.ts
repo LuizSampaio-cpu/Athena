@@ -14,6 +14,8 @@ export class LoginLayoutComponent {
 
   @Input() btnText: string = ''
   @Output("submit") onSubmit = new EventEmitter();
+  @Input() disableBtn: boolean = true;
+
 
   submit() {
     this.onSubmit.emit();

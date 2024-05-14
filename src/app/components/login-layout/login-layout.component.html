@@ -2,14 +2,14 @@
   <section>
     <img src="../../../assets/svg/logomarca_MPT_horizontal_transparente 1.svg"/>
   </section>
-  <section>
     <div class="athena">
-      <img src="../../../assets/svg/Atena 1.svg"/>
+      <img src="../../../assets/svg/coffee.svg"/>
     </div>
+    <section>
     <div class="form-section">
       <h2>Autenticação</h2>
       <ng-content></ng-content>
-      <button class="login" (click)="submit()">{{btnText}}</button>
+      <button class="login" (click)="submit()" [disabled]="disableBtn">{{btnText}}</button>
     </div>
 
     <span>Para acessar o Atena, digite seu nome de usuário e sua senha de acesso à rede</span>
