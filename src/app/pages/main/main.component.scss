@@ -1,0 +1,37 @@
+@import "../../../variables.scss";
+
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  section {
+    height: 925px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-section {
+    gap: 8px;
+    flex-grow: 1;
+
+    background-color: $gray-background;
+  }
+
+  .sidebar-section {
+    flex-grow: 0.15;
+    flex-direction: column;
+    padding: 20px 35px;
+    background-color: white;
+    align-items:start;
+
+
+
+    img {
+      margin-bottom: 30px;
+    }
+  }
+}
