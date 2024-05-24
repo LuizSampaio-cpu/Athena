@@ -11,10 +11,11 @@
     background-color: white;
     font-family: "Inter", sans-serif;
     color: $text-color;
-    font-size: 20;
+    font-size: 35;
     font-weight: 400;
     padding: 16px 0 8px 12px;
     width: 100%;
+    box-shadow: 0px 8px 12px $lighter-text;
   }
 }
 
