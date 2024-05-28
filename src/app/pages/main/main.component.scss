@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 
 main {
   display: flex;
   height: 100vh; // Garante que o main ocupe toda a altura da tela
+  font-family: "Inter", sans-serif;
 
   .sidebar-section {
     width: 15%; // 25% da largura da tela
@@ -11,6 +14,7 @@ main {
     flex-direction: column;
     align-items: center; // Centraliza os itens horizontalmente
     padding: 20px; // Espaçamento interno para evitar que os elementos toquem as bordas
+    border-right: 1px solid lightgray;
 
     img {
       margin-bottom: 10px; // Espaçamento abaixo da imagem
@@ -50,6 +54,7 @@ main {
     height: 100vh; // 100% da altura da tela
     display: flex;
     flex-direction: column;
+    background-color: #f2f2f2;
 
     .navbar-wrapper {
       position: relative; // Para usar o position absolute nos filhos
@@ -61,6 +66,7 @@ main {
       background-color: #ffffff; // Cor de fundo para o navbar
       box-sizing: border-box; // Garante que o padding não aumente a largura total
       height: 150px;
+      border-bottom: 1px solid lightgray;
 
       img {
         position: absolute; // Posiciona a imagem de forma absoluta
@@ -94,6 +100,8 @@ main {
       grid-template-columns: repeat(4, 1fr); // 4 colunas de largura igual
       //gap: 10px; // Espaçamento entre os itens
       padding-top: 40px; // Padding ao redor do container
+      border-radius: 8px;
+      margin-bottom: 10px;
 
 
     }
@@ -103,13 +111,31 @@ main {
       font-weight: bold;
       background-color: #f2f2f2;
       padding: 10px;
-      margin-bottom: 10px;
+      border-bottom: 1px solid lightgray;
+
 
     }
 
     .grid-item {
       padding: 20px;
       background-color: white;
+      border-bottom: 1px solid lightgray;
+
+
+    }
+    .grid-codigo {
+      padding: 20px;
+      background-color: white;
+      border-bottom: 1px solid lightgray;
+      border-left: 1px solid lightgray;
+
+
+    }
+    .grid-açao {
+      padding: 20px;
+      background-color: white;
+      border-bottom: 1px solid lightgray;
+      border-right: 1px solid lightgray;
 
     }
 
