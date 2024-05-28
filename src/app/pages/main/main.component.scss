@@ -1,37 +1,117 @@
-@import "../../../variables.scss";
 
 main {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  height: 100vh; // Garante que o main ocupe toda a altura da tela
 
-  section {
-    height: 925px;
-    flex-direction: column;
+  .sidebar-section {
+    width: 15%; // 25% da largura da tela
+    height: 100vh; // 100% da altura da tela
+    background-color: white;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center; // Centraliza os itens horizontalmente
+    padding: 20px; // Espaçamento interno para evitar que os elementos toquem as bordas
+
+    img {
+      margin-bottom: 10px; // Espaçamento abaixo da imagem
+    }
+
+    h2 {
+      margin: 0; // Remove margem padrão do h2
+    }
+
+    .btn-wrapper {
+      margin-top: auto; // Empurra o btn-wrapper para o fim da section
+      width: 100%; // Garante que o btn-wrapper ocupe toda a largura disponível
+      display: flex;
+      flex-direction: column;
+      align-items: center; // Centraliza os itens horizontalmente
+
+      .btn-primary {
+        margin-bottom: 10px; // Espaçamento abaixo do botão
+      }
+
+      .divider {
+        display: flex;
+        justify-content: space-between;
+        width: 50%; // Ajuste conforme necessário
+
+        div {
+          width: 45%; // Ajuste conforme necessário
+          height: 2px;
+          background-color: black;
+        }
+      }
+    }
   }
 
   .main-section {
-    gap: 8px;
-    flex-grow: 1;
-
-    background-color: $gray-background;
-  }
-
-  .sidebar-section {
-    flex-grow: 0.15;
+    width: 85%; // 75% da largura da tela
+    height: 100vh; // 100% da altura da tela
+    display: flex;
     flex-direction: column;
-    padding: 20px 35px;
-    background-color: white;
-    align-items:start;
 
+    .navbar-wrapper {
+      position: relative; // Para usar o position absolute nos filhos
+      width: 100%; // Ocupa toda a largura da main-section
+      display: flex;
+      justify-content: space-between; // Espaça o conteúdo para as extremidades
+      align-items: center; // Centraliza os itens verticalmente
+      padding: 10px 20px; // Espaçamento interno para evitar que os elementos toquem as bordas
+      background-color: #ffffff; // Cor de fundo para o navbar
+      box-sizing: border-box; // Garante que o padding não aumente a largura total
+      height: 150px;
 
+      img {
+        position: absolute; // Posiciona a imagem de forma absoluta
+        left: 50%;
+        transform: translateX(-50%); // Centraliza horizontalmente´
+        padding: 20px;
+        // Ajuste conforme necessário para a imagem
+        //margin-top: 100px;
+      }
 
-    img {
-      margin-bottom: 30px;
+      .usuarioBtn {
+        color: white;
+        background-color: black;
+        border-radius: 8px;
+        border: none;
+        margin-left: auto; // Garante que o botão esteja à direita
+        padding: 10px 20px; // Espaçamento interno do botão
+        cursor: pointer;
+      }
     }
+
+    .grid-wrapper {
+      padding: 100px;
+      position: relative;
+      width: 1440px;
+      height: 983px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); // 4 colunas de largura igual
+      //gap: 10px; // Espaçamento entre os itens
+      padding-top: 40px; // Padding ao redor do container
+
+
+    }
+
+
+    .grid-header {
+      font-weight: bold;
+      background-color: #f2f2f2;
+      padding: 10px;
+      margin-bottom: 10px;
+
+    }
+
+    .grid-item {
+      padding: 20px;
+      background-color: white;
+
+    }
+
   }
 }
