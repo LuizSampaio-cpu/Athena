@@ -23,17 +23,38 @@ main {
     h2 {
       margin: 0; // Remove margem padrão do h2
     }
+    p {
+      align-self: flex-start;
+      margin-top: 50px;
+      margin-left: 16px;
+      border-bottom: 10px;
+    }
 
-    .btn-wrapper {
-      margin-top: auto; // Empurra o btn-wrapper para o fim da section
-      width: 100%; // Garante que o btn-wrapper ocupe toda a largura disponível
-      display: flex;
-      flex-direction: column;
-      align-items: center; // Centraliza os itens horizontalmente
+    p-menu {
+      padding-top: 16px;
+      //padding-left: 16px;
+      align-self: start;
+      border: none;
+      align-items: start;
 
-      .btn-primary {
-        margin-bottom: 10px; // Espaçamento abaixo do botão
+      ng-template {
+        border: none;
+        align-items: start;
+
+        .p-menuitem-link {
+          display: flex;
+          align-items: center;
+
+          i, span {
+              margin-right: 10px; // Ajuste o valor conforme necessário
+          }
+
+
       }
+
+      }
+    }
+
 
       .divider {
         display: flex;
@@ -97,10 +118,14 @@ main {
       .table {
           border: 1px solid lightgray;
         th {
-
+          color: black;
           background-color: #F1f3f6;
           gap: 10px;
           margin-bottom: 10px;
+        }
+
+        td {
+          color: black;
         }
 
 
@@ -111,4 +136,4 @@ main {
 
 
   }
-}
+
