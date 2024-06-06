@@ -6,16 +6,20 @@ import { MenuModule } from 'primeng/menu'
 import {PanelMenuModule} from 'primeng/panelmenu'
 import { CommonModule } from '@angular/common';
 import { PrimeIcons } from 'primeng/api';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [CommonModule, PaginatorModule, TableModule, ButtonModule, MenuModule, PanelMenuModule],
+  imports: [CommonModule, PaginatorModule, TableModule, ButtonModule, MenuModule, PanelMenuModule, RouterModule],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })
 export class MainComponent {
 
+  constructor(private router: Router) {
+
+  }
 
 
   Chamados = [
@@ -33,9 +37,11 @@ export class MainComponent {
       { codigo: '012', abertoHa: '3 dias', situacao: 'Em andamento', ultimaAcao: 'Teste em progresso' },
   ]
 
-  navigate() {
-    throw new Error('Method not implemented.');
+  navigateNovo() {
+    this.router.navigate(['/novo'])
+  }
+  navigateMain() {
+    this.router.navigate(['/main'])
     }
-
 
 }

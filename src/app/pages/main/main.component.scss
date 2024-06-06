@@ -21,6 +21,7 @@ main {
     }
 
     h2 {
+      text-align: center;
       margin: 0; // Remove margem padrão do h2
     }
     p {
@@ -35,14 +36,14 @@ main {
     .btn-wrapper {
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: flex-start;
 
       .btn-primary {
         margin-left: 10px;
         cursor: pointer;
         font-size: 18px;
         text-align: start;
-        //align-items: center;
+        align-items: start;
         border: none;
         background-color: transparent;
         width:100%;
