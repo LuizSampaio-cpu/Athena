@@ -3,17 +3,19 @@ import { ButtonModule } from 'primeng/button';
 import { PaginatorModule } from 'primeng/paginator';
 import { TableModule } from 'primeng/table'
 import { MenuModule } from 'primeng/menu'
+import {PanelMenuModule} from 'primeng/panelmenu'
 import { CommonModule } from '@angular/common';
 import { PrimeIcons } from 'primeng/api';
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [CommonModule, PaginatorModule, TableModule, ButtonModule, MenuModule],
+  imports: [CommonModule, PaginatorModule, TableModule, ButtonModule, MenuModule, PanelMenuModule],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })
 export class MainComponent {
+
 
 
   Chamados = [
@@ -31,11 +33,9 @@ export class MainComponent {
       { codigo: '012', abertoHa: '3 dias', situacao: 'Em andamento', ultimaAcao: 'Teste em progresso' },
   ]
 
-  items = [
-    {label: 'Novo Chamado', route: '/new', url: 'https://localhost:4200/new', icon: PrimeIcons.PLUS},
-    {label: 'Meus Chamados', route: '/main', url: 'https://localhost:4200/main', icon: PrimeIcons.HOME},
-    {label: 'Acompanhamentos', route: '/acompanhamentos', url: 'https://localhost:4200/acompanhamentos', icon: PrimeIcons.SEARCH},
-  ]
+  navigate() {
+    throw new Error('Method not implemented.');
+    }
 
 
 }
