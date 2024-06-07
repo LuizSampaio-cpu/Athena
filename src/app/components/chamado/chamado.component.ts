@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-chamado',
@@ -8,5 +9,16 @@ import { Component } from '@angular/core';
   styleUrl: './chamado.component.scss'
 })
 export class ChamadoComponent {
+
+  constructor(private router: Router) {
+
+  }
+
+  navigateNovo() {
+    this.router.navigate(['/novo'])
+  }
+  navigateMain() {
+    this.router.navigate(['/main'])
+    }
 
 }
