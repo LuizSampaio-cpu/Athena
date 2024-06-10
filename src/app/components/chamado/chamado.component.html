@@ -36,6 +36,22 @@
       <h1>Novo Chamado</h1>
       <p>Abra um novo chamado</p>
 
+      <p>A que setor se destina o chamado:</p>
+      <p-dropdown
+          [options]="setores"
+          [(ngModel)]="SetorEscolhido"
+          optionLabel="nome"
+          placeholder="Selecione"
+      />
+
+      <p>Serviço a ser realizado: </p>
+      <p-dropdown
+          [options]="servicos"
+          [(ngModel)]="ServicoEscolhido"
+          optionLabel="nome"
+          placeholder="Selecione"
+      />
+
 
     </div>
 
