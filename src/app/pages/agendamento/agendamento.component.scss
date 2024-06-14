@@ -106,68 +106,6 @@ main {
       }
     }
 
-    .grid-wrapper {
-      padding: 100px;
-      position: relative;
-      width: 1440px;
-      height: 93px;
-    }
 
-    .form-wrapper {
-      padding-top: 30px;
-      padding-left: 100px;
-
-      .form-group {
-        margin-bottom: 20px;
-        display: flex;
-        flex-direction: column;
-
-        p {
-          margin: 0;
-          margin-bottom: 5px;
-        }
-
-        p-dropdown {
-          width: 200px;
-          margin-bottom: 10px;
-        }
-      }
-
-      .checkbox-group {
-        margin-top: 20px;
-        flex-direction: row;
-
-        .checkbox {
-          display: flex;
-          align-items: center;
-          margin-bottom: 10px;
-
-
-          p {
-            margin: 0;
-            margin-left: 10px;
-            padding-right: 20px;
-          }
-        }
-      }
-
-      .next-page-button {
-        padding-top: 20px;
-
-
-        .Avançar {
-          font-size: 20px;
-          cursor: pointer;
-          text-align: center;
-          height: 30px;
-          width: 300px;
-          border: none;
-          border-radius: 8px;
-          background-color: $mp-color;
-          color: white;
-        }
-
-      }
-    }
   }
 }

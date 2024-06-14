@@ -3,62 +3,76 @@
     <img src="../../../assets/svg/coffee.svg"/>
     <h2>Café MPT</h2>
     <br>
-      <p>Menu</p>
+    <p>Menu</p>
 
-        <div class="btn-wrapper">
-
-          <img src="../../../assets/svg/search.svg">
-          <button class="btn-primary" (click)="navigateNovo()">Chamados</button>
-
-        </div>
-        <div class="btn-wrapper">
-          <img src="../../../assets/svg/home.svg">
-          <button class="btn-primary"  (click)="navigateMain()">Meus Chamados</button>
-        </div>
-        <div class="btn-wrapper">
-          <img src="../../../assets/svg/search.svg">
-          <button class="btn-primary" (click)="navigateMain()">Acompanhamentos</button>
-        </div>
-
-
-
-
-
+    <div class="btn-wrapper">
+      <img src="../../../assets/svg/search.svg">
+      <button class="btn-primary" (click)="navigateNovo()">Chamados</button>
+    </div>
+    <div class="btn-wrapper">
+      <img src="../../../assets/svg/home.svg">
+      <button class="btn-primary" (click)="navigateMain()">Meus Chamados</button>
+    </div>
+    <div class="btn-wrapper">
+      <img src="../../../assets/svg/search.svg">
+      <button class="btn-primary" (click)="navigateMain()">Acompanhamentos</button>
+    </div>
   </section>
 
   <section class="main-section">
     <div class="navbar-wrapper">
-        <img src="../../../assets/svg/logomarca_MPT_horizontal_transparente 1(1).png"/>
-        <button class="usuarioBtn">Usuário</button>
+      <img src="../../../assets/svg/logomarca_MPT_horizontal_transparente 1(1).png"/>
+      <button class="usuarioBtn">Usuário</button>
     </div>
 
     <div class="grid-wrapper">
       <h1>Novo Chamado</h1>
       <p>Abra um novo chamado</p>
-
-      <p>A que setor se destina o chamado:</p>
-      <p-dropdown
-          [options]="setores"
-          [(ngModel)]="SetorEscolhido"
-          optionLabel="nome"
-          placeholder="Selecione"
-      />
-
-      <p>Serviço a ser realizado: </p>
-      <p-dropdown
-          [options]="servicos"
-          [(ngModel)]="ServicoEscolhido"
-          optionLabel="nome"
-          placeholder="Selecione"
-      />
-
-
     </div>
 
+    <div class="form-wrapper">
+      <div class="form-group">
+        <p>Setor a que se destina o chamado:</p>
+        <p-dropdown
+            [options]="setores"
+            [(ngModel)]="SetorEscolhido"
+            optionLabel="nome"
+            placeholder="Selecione"
+        ></p-dropdown>
+      </div>
 
+      <div class="form-group">
+        <p>Serviço a ser realizado:</p>
+        <p-dropdown
+            [options]="servicos"
+            [(ngModel)]="ServicoEscolhido"
+            optionLabel="nome"
+            placeholder="Selecione"
+        ></p-dropdown>
+      </div>
+      <p>Deseja agendar?</p>
+      <div class="form-group checkbox-group">
 
-
+        <div class="checkbox">
+          <p-checkbox
+              [(ngModel)]="sim"
+              [binary]="true"
+              inputId="binarySim"
+              (onChange)="onCheckboxChange('sim')" />
+          <p>Sim</p>
+        </div>
+        <div class="checkbox">
+          <p-checkbox
+              [(ngModel)]="nao"
+              [binary]="true"
+              inputId="binaryNao"
+              (onChange)="onCheckboxChange('nao')"/>
+          <p>Não</p>
+        </div>
+      </div>
+      <div class="next-page-button">
+        <button class="Avançar" (click)="navigateNext()">Avançar ></button>
+      </div>
+    </div>
   </section>
-
-
 </main>

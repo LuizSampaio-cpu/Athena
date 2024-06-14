@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { DropdownModule } from 'primeng/dropdown';
 import { FormsModule } from '@angular/forms';
+import { CheckboxModule } from 'primeng/checkbox';
+import { ToastrModule } from 'ngx-toastr';
 
 interface Setor {
   codigo: number;
@@ -15,7 +17,7 @@ interface Servico {
 @Component({
   selector: 'app-chamado',
   standalone: true,
-  imports: [DropdownModule, FormsModule],
+  imports: [DropdownModule, FormsModule, CheckboxModule, ToastrModule],
   templateUrl: './chamado.component.html',
   styleUrl: './chamado.component.scss'
 })
@@ -25,6 +27,8 @@ export class ChamadoComponent {
   constructor(private router: Router) {
 
   }
+  sim: boolean = false;
+  nao: boolean = false;
 
   setores !: Setor[];
   servicos !: Servico[];
@@ -51,6 +55,36 @@ export class ChamadoComponent {
   }
   navigateMain() {
     this.router.navigate(['/main'])
+  }
+  navigateAgendamento(result: boolean){
+    if( result == true) {
+      this.router.navigate(['/agendamento'])
     }
+    else {
+      this.router.navigate(['/main'])
+    }
+
+
+  }
+
+  onCheckboxChange(selectedCheckbox: string){
+    if (selectedCheckbox === 'sim') {
+      this.nao = !this.sim;
+      return true;
+    } else if (selectedCheckbox === 'nao') {
+      this.sim = !this.nao;
+
+    }
+    return false;
+  }
+
+  navigateNext() {
+    if (this.sim) {
+      this.router.navigate(['/agendamento']);
+    } else if (this.nao) {
+      this.router.navigate(['/main']);
+
+    }
+  }
 
 }
