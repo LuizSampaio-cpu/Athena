@@ -87,4 +87,8 @@ export class ChamadoComponent {
     }
   }
 
+  navigateUsuario() {
+    this.router.navigate(['/usuario'])
+    }
+
 }

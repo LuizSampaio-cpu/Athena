@@ -47,6 +47,11 @@ export class AgendamentoComponent {
     this.router.navigate(['/main'])
   }
 
+  navigateUsuario() {
+    this.router.navigate(['/usuario'])
+    }
+
+
 
 
 }

@@ -30,38 +30,10 @@
   <section class="main-section">
     <div class="navbar-wrapper">
         <img src="../../../assets/svg/logomarca_MPT_horizontal_transparente 1(1).png"/>
-        <button class="usuarioBtn" (click)="navigateUsuario()">Usuário</button>
+        <!--<button class="usuarioBtn" (click)="navigateUsuario()">Usuário</button>-->
     </div>
 
-    <div class="grid-wrapper">
-      <h1>Meus Chamados</h1>
-      <p>Chamados em aberto ou encerrados</p>
 
-      <div class="table">
-        <p-table [value]="Chamados" [paginator]="true" [rows]="4">
-          <ng-template pTemplate="header">
-            <tr>
-              <th>Código</th>
-              <th>Aberto há</th>
-              <th>Situação</th>
-              <th>Última Ação</th>
-            </tr>
-          </ng-template>
-          <ng-template pTemplate="body" let-chamado>
-            <tr>
-                <td>{{ chamado.codigo }}</td>
-                <td>{{ chamado.abertoHa }}</td>
-                <td>{{ chamado.situacao }}</td>
-                <td>{{ chamado.ultimaAcao }}</td>
-            </tr>
-          </ng-template>
-
-        </p-table>
-      </div>
-
-
-
-    </div>
 
 
 
