@@ -13,7 +13,6 @@ import { CalendarModule } from 'primeng/calendar';
 export class AgendamentoComponent {
 
 
-
   constructor(private router: Router) {
 
   }
@@ -42,6 +41,10 @@ export class AgendamentoComponent {
     }
 
 
+  }
+
+  navigateNext() {
+    this.router.navigate(['/main'])
   }
 
 

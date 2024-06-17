@@ -106,6 +106,35 @@ main {
       }
     }
 
+    .title {
+      padding-top: 100px;
+      padding-left: 100px;
+    }
+
+    .flex-auto {
+      padding-top: 80px;
+      padding-left: 100px;
+    }
+
+    .next-page-button {
+      padding-top: 80px;
+      padding-left: 120px;
+
+
+      .Avançar {
+
+        font-size: 20px;
+        cursor: pointer;
+        text-align: center;
+        height: 30px;
+        width: 300px;
+        border: none;
+        border-radius: 8px;
+        background-color: $mp-color;
+        color: white;
+      }
+
+    }
 
   }
 }
