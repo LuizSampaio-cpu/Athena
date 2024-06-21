@@ -19,40 +19,45 @@ interface Usuario {
   standalone: true,
   imports: [InputTextModule, FormsModule],
   templateUrl: './usuario.component.html',
-  styleUrl: './usuario.component.scss'
+  styleUrls: ['./usuario.component.scss']
 })
 export class UsuarioComponent {
-navigateNext() {
-throw new Error('Method not implemented.');
-}
-  constructor(private router: Router) {
+  usuarios!: Usuario[];
+  UsuarioEscolhido?: Usuario;
 
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    this.UsuarioEscolhido = {
+      nome: 'Luiz Sampaio Horta',
+      nomeExibicao: 'Luiz Horta',
+      telefoneFixo: '99 9999-9999',
+      TelefoneMovel: '99 9999-9999',
+      Sala: 1111,
+      Regional: 'PRT17',
+      Unidade: 'Sede',
+      Cargo: ''
+    };
   }
 
-  usuarios !: Usuario[]
+  navigateNext() {
+    // Lógica para atualizar os dados do usuário se necessário
+    // Exemplo: salvar os dados atualizados em um serviço ou backend
+    console.log('Dados do usuário atualizados:', this.UsuarioEscolhido);
 
-  UsuarioEscolhido ?: Usuario
-
-  ngOnInit(){
-    this.UsuarioEscolhido =
-      {nome: 'Luiz Sampaio Horta',
-        nomeExibicao: 'Luiz Horta',
-        telefoneFixo: '99 9999-9999',
-        TelefoneMovel: '99 9999-9999',
-        Sala: 1111, Regional: 'PRT17',
-        Unidade: 'Sede',
-        Cargo: "" }
-
-
+    // Navegação para a próxima página
+    this.router.navigate(['/main']); // Altere '/proxima-pagina' para a rota desejada
   }
 
   navigateNovo() {
-    this.router.navigate(['/novo'])
+    this.router.navigate(['/novo']);
   }
+
   navigateMain() {
-    this.router.navigate(['/main'])
+    this.router.navigate(['/main']);
   }
+
   navigateUsuario() {
-    this.router.navigate(['/usuario'])
-    }
+    this.router.navigate(['/usuario']);
+  }
 }
