@@ -1,21 +1,14 @@
 import { Component } from '@angular/core';
-import { ButtonModule } from 'primeng/button';
-import { PaginatorModule } from 'primeng/paginator';
-import { TableModule } from 'primeng/table'
-import { MenuModule } from 'primeng/menu'
-import {PanelMenuModule} from 'primeng/panelmenu'
-import { CommonModule } from '@angular/common';
-import { PrimeIcons } from 'primeng/api';
-import { Router, RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-main',
+  selector: 'app-acompanhamento',
   standalone: true,
-  imports: [CommonModule, PaginatorModule, TableModule, ButtonModule, MenuModule, PanelMenuModule, RouterModule],
-  templateUrl: './main.component.html',
-  styleUrl: './main.component.scss'
+  imports: [],
+  templateUrl: './acompanhamento.component.html',
+  styleUrl: './acompanhamento.component.scss'
 })
-export class MainComponent {
+export class AcompanhamentoComponent {
 
   constructor(private router: Router) {
 
@@ -49,5 +42,6 @@ export class MainComponent {
   navigateAcompanhamento() {
     this.router.navigate(['/acompanhamento'])
     }
+
 
 }

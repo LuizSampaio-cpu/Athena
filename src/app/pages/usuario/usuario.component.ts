@@ -60,4 +60,8 @@ export class UsuarioComponent {
   navigateUsuario() {
     this.router.navigate(['/usuario']);
   }
+
+  navigateAcompanhamento() {
+    this.router.navigate(['/acompanhamento'])
+    }
 }

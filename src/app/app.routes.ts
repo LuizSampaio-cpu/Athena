@@ -4,6 +4,7 @@ import { MainComponent } from './pages/main/main.component';
 import { ChamadoComponent } from './components/chamado/chamado.component';
 import { AgendamentoComponent } from './pages/agendamento/agendamento.component';
 import { UsuarioComponent } from './pages/usuario/usuario.component';
+import { AcompanhamentoComponent } from './pages/acompanhamento/acompanhamento.component';
 
 export const routes: Routes = [
   {
@@ -25,5 +26,13 @@ export const routes: Routes = [
   {
     path: "usuario",
     component: UsuarioComponent
+  },
+  {
+    path: "",
+    component: LoginComponent
+  },
+  {
+    path: "acompanhamento",
+    component: AcompanhamentoComponent
   }
 ];

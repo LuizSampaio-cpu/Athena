@@ -91,4 +91,8 @@ export class ChamadoComponent {
     this.router.navigate(['/usuario'])
     }
 
+  navigateAcompanhamento() {
+    this.router.navigate(['/acompanhamento'])
+    }
+
 }
