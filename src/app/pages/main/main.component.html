@@ -8,16 +8,16 @@
 
         <div class="btn-wrapper">
 
-          <img src="../../../assets/svg/search.svg">
+          <img src="../../../assets/svg/search(1).svg">
           <button class="btn-primary" (click)="navigateNovo()">Chamados</button>
 
         </div>
         <div class="btn-wrapper">
-          <img src="../../../assets/svg/home.svg">
+          <img src="../../../assets/svg/Vector.svg">
           <button class="btn-primary"  (click)="navigateMain()">Meus Chamados</button>
         </div>
         <div class="btn-wrapper">
-          <img src="../../../assets/svg/search.svg">
+          <img src="../../../assets/svg/radio.svg">
           <button class="btn-primary" (click)="navigateAcompanhamento()">Acompanhamentos</button>
         </div>
 
@@ -42,17 +42,15 @@
           <ng-template pTemplate="header">
             <tr>
               <th>Código</th>
-              <th>Aberto há</th>
+              <th>Título</th>
               <th>Situação</th>
-              <th>Última Ação</th>
             </tr>
           </ng-template>
           <ng-template pTemplate="body" let-chamado>
             <tr>
                 <td>{{ chamado.codigo }}</td>
-                <td>{{ chamado.abertoHa }}</td>
+                <td>{{ chamado.titulo }}</td>
                 <td>{{ chamado.situacao }}</td>
-                <td>{{ chamado.ultimaAcao }}</td>
             </tr>
           </ng-template>
 
